@@ -424,6 +424,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 Toast.makeText(LoginActivity.this,success, Toast.LENGTH_SHORT).show();
             }
             else if("0".equals(success)){
+                mEmailView.setError(getString(R.string.error_unknown_email));
+                mEmailView.requestFocus();
                 Toast.makeText(LoginActivity.this, "用户名不存在，请注册用户", Toast.LENGTH_SHORT).show();
             }
             else if("1".equals(success)){
